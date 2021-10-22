@@ -100,6 +100,14 @@ public class MainActivity extends AppCompatActivity {
                         tvResult.append("9");
                     }
                     break;
+                case R.id.btn_0:
+                    if (tvResult.getText().toString().equals("0")) {
+                        tvResult.setText("0");
+                    } else {
+                        tvResult.append("0");
+                    }
+                    break;
+
             }
         }
 

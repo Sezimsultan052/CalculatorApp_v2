@@ -177,6 +177,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Button.Gray.Dark"
+                android:id="@+id/btn_0"
                 android:paddingStart="28dp"
                 android:paddingEnd="0dp"
                 android:onClick="onNumberClick"
