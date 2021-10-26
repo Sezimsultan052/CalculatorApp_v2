@@ -2,8 +2,10 @@ package com.geektech.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvResult;
     private Integer firstVariable, secondVariable;
     private String operation;
+    private Button btn;
+
+    boolean ButtonIsUsed = false;
 
     boolean isEmpty = false;
     // boolean addition= false, subtract = false, multiplication = false, division = false;
@@ -20,7 +25,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvResult = findViewById(R.id.tv_result);
+        btn = findViewById(R.id.btn_send_res);
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    intent.putExtra("res", tvResult.getText().toString());
+                    startActivity(intent);
+
+
+                }
+            });
+
+
+
     }
+
+
+
+
+
 
     public void onNumberClick(View view) {
 //        if(division == true  || multiplication== true || subtract == true || addition == true){
@@ -28,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         if (isEmpty == true) {
             tvResult.setText("");
             isEmpty = false;
+        }
+        if(ButtonIsUsed == true){
+            btn.setVisibility(View.INVISIBLE);
+            ButtonIsUsed = false;
         }
 
             switch (view.getId()) {
@@ -139,10 +168,14 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.btn_equal:
                 //12+21
+
+
                 String second = tvResult.getText().toString();
                 second = second.replace(firstVariable + operation, "");
                 //21
                 if (!second.contains("=")) {
+                    btn.setVisibility(View.VISIBLE);
+                    ButtonIsUsed = true;
                     secondVariable = Integer.parseInt(second);
                     if (firstVariable != null) {
                         if(operation == "+"){
@@ -176,7 +209,10 @@ public class MainActivity extends AppCompatActivity {
                         }
 
 
+
+
                     }
+
                 }
 
 
@@ -185,4 +221,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 }

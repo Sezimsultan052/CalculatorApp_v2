@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".SecondActivity">
+
+   <TextView
+       android:id="@+id/text_view"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:text="Не смогла вставить изображение"
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@color/gray"
+
+       />
+
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginStart="80dp"
+        android:text="Policies"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/text_view" />
+
+    <com.google.android.material.button.MaterialButton
+         android:id="@+id/btn_policy"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@+id/text_view2"
+         app:cornerRadius="100dp"
+         android:layout_marginTop="15dp"
+         android:layout_marginStart="30dp"
+         android:layout_marginEnd="30dp"
+         android:backgroundTint="@color/white"
+         android:text="Policy"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         />
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/btn_policy2"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@+id/btn_policy"
+         app:cornerRadius="100dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginStart="30dp"
+         android:layout_marginEnd="30dp"
+         android:backgroundTint="@color/white"
+         android:text="Policy Category"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         />
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/btn_policy3"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@+id/btn_policy2"
+         app:cornerRadius="100dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginStart="30dp"
+         android:layout_marginEnd="30dp"
+         android:backgroundTint="@color/white"
+         android:text="Origin Country"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         />
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/btn_policy4"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/btn_policy3"
+       app:cornerRadius="100dp"
+       android:layout_marginTop="5dp"
+       android:layout_marginStart="30dp"
+       android:layout_marginEnd="30dp"
+       android:backgroundTint="@color/white"
+       android:text="Brand"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       />
+    <TextView
+        android:layout_marginStart="50dp"
+        android:id="@+id/text_view_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btn_policy4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_res"
+        app:cornerRadius="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/red"
+        android:text="Finish all activities"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
